@@ -4,10 +4,13 @@ const crypto = require('crypto');
 
 const crearUser = async (req = request, res = response) => {  
     try {
-        const new_body = { ...req.body, key: crypto.createHash('md5').update(req.body.user + req.body.password).digest('hex') }
+        const new_body = { 
+            ...req.body,
+            key: req.body.user, 
+        }
 
-        const user = new user( new_body );
-        const createduser = await User.save();
+        const user = new User( new_body );
+        const createduser = await user.save();
 
         res.status(201).json({
             status: true,
@@ -27,7 +30,7 @@ const loginUser = async (req = request, res = response) => {
     const { user, password } = req.body;
 
     try {
-        const userItem = await user.find({key: user});
+        const userItem = await User.find({key: user});
 
         if( !userItem ){
             return res.status(404).json({
@@ -37,7 +40,7 @@ const loginUser = async (req = request, res = response) => {
         }
 
         if (password === userItem[0].password ){
-            res.status(201).json({
+            return res.status(201).json({
                 status: true,
                 user
             });
