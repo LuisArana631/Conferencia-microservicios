@@ -7,5 +7,7 @@ export const types = {
     mascotaSetItem: '[mascota] Set Item Active',
     mascotaEditItem: '[mascota] Edit Item',
     mascotaDeleteItem: '[mascota] Delte Item',
-    mascotaLoaded: '[mascota] Mascota Cargada'
+    mascotaLoaded: '[mascota] Mascota Cargada',
+    // Tipos para manejar los usuarios
+    userLogin: '[user] Login',
 }

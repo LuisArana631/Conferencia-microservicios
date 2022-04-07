@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Mascotas } from './Mascotas';
-
 import './index.css';
+import { AppRouter } from './router/AppRouter';
 
 ReactDOM.render(
-    <Mascotas />, 
+    <AppRouter />, 
     document.getElementById('root')
 );
 

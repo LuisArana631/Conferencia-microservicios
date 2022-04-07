@@ -10,7 +10,10 @@ export const Navbar = () => {
                 <span className="navbar-brand">
                     Mascotas
                 </span>
-            </div>            
+            </div>     
+            <button className='btn btn-outline-danger float-right'>
+                <span>Salir</span>
+            </button>       
         </div>
     );
 }
