@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-lb
+  name: servicecrud-lb
 spec:
   type: LoadBalancer
   ports:
@@ -10,4 +10,4 @@ spec:
       targetPort: 3800
       name: http
   selector:
-    role: backend
+    role: servicecrud

@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: serviceLogin
+  name: servicelogin
 spec:
   replicas: 3
   selector:
     matchLabels:
-      role: serviceLogin
+      role: servicelogin
   minReadySeconds: 20
   strategy:
     rollingUpdate:
@@ -16,10 +16,10 @@ spec:
   template:
     metadata:
       labels:
-        role: serviceLogin
+        role: servicelogin
     spec:
       containers:
-      - name: serviceLogin
-        image: blocnotas/serviceLogin
+      - name: servicelogin
+        image: blocnotas/servicelogin
         ports:
         - containerPort: 3900

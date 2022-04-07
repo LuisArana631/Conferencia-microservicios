@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: serviceCrud
+  name: servicecrud
 spec:
   replicas: 3
   selector:
     matchLabels:
-      role: serviceCrud
+      role: servicecrud
   minReadySeconds: 20
   strategy:
     rollingUpdate:
@@ -16,10 +16,10 @@ spec:
   template:
     metadata:
       labels:
-        role: serviceCrud
+        role: servicecrud
     spec:
       containers:
-      - name: serviceCrud
-        image: blocnotas/serviceCrud
+      - name: servicecrud
+        image: blocnotas/servicecrud
         ports:
         - containerPort: 3800
